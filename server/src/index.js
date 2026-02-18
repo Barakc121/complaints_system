@@ -1,9 +1,5 @@
 import express, { json } from "express";
 // import userRoutes from './routes/user.routes.js';
-// import postRoutes from './routes/post.routes.js';
-// import riddlesRoutes from './routes/riddles.routes.js';
-
-// await connectToDB();
 
 const complaints = [];
 
