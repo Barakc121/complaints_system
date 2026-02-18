@@ -1,16 +1,18 @@
-import { useState } from 'react'
-import './App.css'
-import Submission from './pages/HomePage'
-
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import SubmitComplaintPage from './pages/SubmitComplaintPage';
+import AdminComplaintsPage from './pages/AdminComplaintsPage';
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-  
-   <Submission/>
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/submit" element={<SubmitComplaintPage />} />
+        <Route path="/admin/complaints" element={<AdminComplaintsPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
