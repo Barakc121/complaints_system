@@ -19,6 +19,6 @@ export async function connectToMongo() {
 }
 
 export async function getMongoConn(){
-    if(!client) client=await connectToDB();
+    if(!client) client=await connectToMongo();
     return client.db(DB_NAME);
 }
